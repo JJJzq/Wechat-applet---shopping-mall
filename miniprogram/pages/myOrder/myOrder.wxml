@@ -1,0 +1,45 @@
+<!-- 顶部标签栏 -->
+<view class="top">
+  <view wx:for="{{tables}}" wx:key="{{index}}" class="tab_item {{current_Tab==index?'selected':''}}" bindtap="getCurrentIndex" data-index="{{index}}">
+    {{item}}
+  </view>
+</view>
+
+<!-- 订单列表 -->
+<view wx:if="{{list&&list.length>0}}">
+  <view class="order_item" wx:for="{{list}}" wx:key="index">
+    <view class="order_item_id"><text>订单号：{{item._id}}</text></view>
+    <view class="content">
+      <view>
+        <view class="order_item_goods" wx:for="{{item.goods}}" wx:for-item="item2">
+          <text>{{item2.fName}}</text>
+          <text class="order_item2_price">￥{{item2.fPrice}}</text>
+          <text>X{{item2.number}}</text>
+        </view>
+      </view>
+      <!-- 订单状态为待发货 -->
+      <view wx:if="{{current_Tab==0}}">
+        <button class="cancle" bindtap="cancle" data-id="{{item._id}}">取消订单</button>
+      </view>
+
+      <!-- 订单状态为待评价 -->
+      <view wx:if="{{current_Tab==1}}">
+        <button class="pingjia" bindtap="gopj" data-id="{{item._id}}">去评价</button>
+      </view>
+
+      <!-- 订单状态为已完成 -->
+      <view wx:if="{{current_Tab==2}}">
+        <button class="checkpj" bindtap="goMycomment" data-id="{{item._id}}">查看评价</button>
+      </view>
+
+    </view>
+
+
+    <view class="order_item_price"><text>总价：{{item.totalMoney}}￥</text></view>
+    <view class="order_item_price"><text>收货地址：{{item.address}}</text></view>
+    <view class="order_item_time"><text>下单时间:{{item.create_time}}</text></view>
+  </view>
+</view>
+<view wx:else class="nothing">
+  <text class="nothing_txt">数据为空</text>
+</view>

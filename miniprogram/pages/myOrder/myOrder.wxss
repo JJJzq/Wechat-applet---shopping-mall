@@ -1,0 +1,107 @@
+/* 顶部导航 */
+.top {
+  display: flex;
+  background-color: white;
+}
+
+/* 标签 */
+.tab_item {
+  flex: 1;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+/* 选中标签样式 */
+.selected {
+  border-bottom: 8rpx solid red;
+  color: red;
+}
+
+
+/* 订单信息部分 */
+.order_item {
+  margin-top: 20rpx;
+  background-color: white;
+}
+
+.order_item_id {
+  font-size: 30rpx;
+  padding: 15rpx;
+  border-bottom: 3rpx solid gainsboro;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.order_item_goods {
+  padding: 25rpx;
+}
+
+.cancle {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 5rpx 20rpx;
+  /* margin-top: 30rpx; */
+  /* margin-left:180rpx ; */
+  flex: 2;
+  margin: 30rpx;
+  border: gray 2rpx solid;
+  display: inline-block;
+  line-height: 56rpx;
+  color: gray;
+}
+
+.pingjia {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 5rpx 20rpx;
+  flex: 2;
+  margin: 30rpx;
+  border: red 2rpx solid;
+  color: red;
+}
+
+.checkpj {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 5rpx 20rpx;
+  flex: 2;
+  margin: 30rpx;
+  border: red 2rpx solid;
+  color: red;
+}
+
+
+.order_item_price {
+  padding: 15rpx;
+  border-bottom: 3rpx solid gainsboro;
+}
+
+.order_item_time {
+  padding: 15rpx;
+  border-bottom: 3rpx solid gainsboro;
+}
+
+
+/* 二层列表 */
+.order_item2_price {
+  color: red;
+  margin-right: 30rpx;
+}
+
+
+.nothing {
+  text-align: center;
+  margin-top: 200rpx;
+}
+
+.nothing_txt {
+  background-color: gainsboro;
+  padding: 30rpx;
+  color: white;
+  border-radius: 40rpx;
+}

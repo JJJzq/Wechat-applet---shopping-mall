@@ -1,0 +1,94 @@
+<view class="content">
+  <view class="top">
+    <scroll-view scroll-y class="sv">
+      <view class="xiangqing">
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="sp">
+          <block wx:for="{{imgUrls}}">
+            <swiper-item>
+              <image src="{{detail.fImg}}" />
+            </swiper-item>
+          </block>
+        </swiper>
+        <view class="describe">
+          <view class="describe-left">
+            <view class="title">
+              <text>{{detail.fName}}</text>
+            </view>
+            <view class="body">
+              <view class="des">
+                <text>{{detail.fDes}}</text>
+              </view>
+              <view class="sale">
+                <text>已售{{detail.fSellNum}}件</text>
+              </view>
+            </view>
+            <view class="jiage">
+              <!-- <view class="vipprice">
+                <text>VIP会员价 ￥{{curProduct.fVip.value}}</text>
+              </view> -->
+              <view class="price">
+                <text>普通会员价 ￥{{detail.fPrice}}</text>
+              </view>
+            </view>
+          </view>
+          <view class="describe-right">
+            <image src="cloud://bysj-7glbx3bp5b77a3f1.6279-bysj-7glbx3bp5b77a3f1-1310139918/image/shoucang.png"></image>
+          </view>
+        </view>
+        <!-- <view class="vip"></view> -->
+        <view class="button">
+          <view class="button-left">
+            <text class="xiahuaxian {{jieguo==0?'hidexian':''}}" bindtap="changeJG1">商品详情</text>
+          </view>
+          <view class="button-right">
+            <text class="xiahuaxian {{jieguo==1?'hidexian':''}}" bindtap="changeJG2">商品评价</text>
+          </view>
+        </view>
+        <view class="plandxq">
+          <view class="xq {{jieguo==0?'myhide':''}}">
+            <view class="xq-img">
+              <image src="{{detail.fXqImg}}" mode="widthFix" style="width:100%"></image>
+            </view>
+
+          </view>
+          <!-- 评论 -->
+          <view class="pl {{jieguo==1?'myhide':''}}">
+            <block wx:for="{{pinglun}}" wx:key="{{index}}">
+              <view class="back">
+                <view class="up">
+                  <image src="{{item.user_img}}"></image>
+                  <text>{{item.user_name}}</text>
+                </view>
+
+                <view class="down">
+                  <text>{{item.content}}</text>
+                </view>
+                <view class="pl_date"><text>{{item.pl_date}}</text></view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="bottom">
+    <view class="call">
+      <view class="call-img">
+        <image src="/pages/image/kefu1.png"></image>
+      </view>
+      <view class="call-text"><text>客服</text></view>
+    </view>
+    <view class="cart">
+      <view class="call-img">
+        <image src="/pages/image/gouwuche1.png"></image>
+      </view>
+      <view class="call-text"><text>购物车</text></view>
+    </view>
+    <view class="addCart">
+      <view class="add" bindtap="addCart"><text>加入购物车</text></view>
+    </view>
+    <view class="buyNow">
+      <view class="add" bindtap="toOrder"><text>立即购买</text></view>
+    </view>
+  </view>
+</view>

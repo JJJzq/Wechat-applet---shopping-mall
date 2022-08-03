@@ -1,0 +1,239 @@
+.content {
+  width: 750rpx;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dzxx{
+  padding:30rpx 20rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  border-bottom:4rpx solid rgb(197, 195, 195) ;
+}
+.hqdz{
+  width: 750rpx;
+  font-weight: bolder;
+}
+.address_box{
+  padding:30rpx 20rpx;
+  border-bottom:4rpx solid rgb(197, 195, 195) ;
+}
+.address_box_top{
+  margin-bottom: 20rpx;
+}
+.name{
+  margin-right: 30rpx;
+}
+
+.gwmx{
+  padding:30rpx 20rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  border-bottom:4rpx solid rgb(197, 195, 195) ;
+}
+
+.bz{
+  padding:30rpx 20rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  border-bottom:4rpx solid rgb(197, 195, 195) ;
+}
+.note{
+  padding:30rpx 20rpx;
+  border-bottom:4rpx solid rgb(197, 195, 195) ;
+}
+
+
+
+.top {
+  width: 750rpx;
+  height: 70%;
+  /* background-color: yellow; */
+}
+
+.order {
+  width: 750rpx;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* background-color: royalblue; */
+}
+
+.select {
+  width: 70rpx;
+  height: 70rpx;
+  /* margin-top: 65rpx; *//* background-color: red; */
+}
+
+.order-image {
+  width: 180rpx;
+  height: 180rpx;
+  /* margin-top: 10rpx; *//* background-color: yellow; */
+}
+
+.order-image image {
+  width: 100%;
+  height: 100%;
+}
+
+.order-des {
+  width: 280rpx;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  /* background-color: greenyellow; */
+}
+
+.sp-name {
+  width: 260rpx;
+  height: 70rpx;
+  margin-left: 10rpx;
+  margin-top: 20rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+  /*处理文字长度*/
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  /* background-color: red; */
+}
+
+.sp-des {
+  width: 260rpx;
+  height: 60rpx;
+  margin-left: 10rpx;
+  font-size: 25rpx;
+  font-weight: bold;
+  color: grey;
+  /*处理文字长度*/
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  /* background-color: blue; */
+}
+
+.sp-price {
+  width: 260rpx;
+  height: 50rpx;
+  margin-left: 10rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+  color: red;
+  /* background-color: orange; */
+}
+
+.order-op {
+  width: 240rpx;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  /* background-color: aqua; */
+}
+
+.del {
+  width: 50rpx;
+  height: 70rpx;
+  margin-top: 20rpx;
+  margin-left: 170rpx;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: grey;
+  /* background-color: yellow; */
+}
+
+.jj {
+  width: 200rpx;
+  height: 70rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  /* background-color: greenyellow; */
+}
+
+.jian {
+  width: 50rpx;
+  height: 70rpx;
+  font-size: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1rpx solid #ededed;
+}
+
+.bj {
+  width: 100rpx;
+  height: 70rpx;
+  font-size: 35rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(231, 168, 168);
+  border-top: 1rpx solid #ededed;
+  border-bottom: 1rpx solid #ededed;
+}
+
+.jia {
+  width: 50rpx;
+  height: 70rpx;
+  text-align: center;
+  font-size: 50rpx;
+  border: 1rpx solid #ededed;
+  background-color: white;
+}
+
+.bottom {
+  width: 750rpx;
+  height: 100rpx;
+  position: absolute;
+  bottom: 0rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+}
+
+.quanxuan {
+  width: 100rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; *//* background-color: yellow; */
+}
+
+.zongjia {
+  width: 230rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: red;
+  justify-content: flex-start;
+  font-weight:bold ;
+  margin-left: 150rpx;
+  /* background-color: gold; */
+}
+
+.ljzf {
+  width: 270rpx;
+  height: 100%;
+  /* border-radius: 20rpx; */
+  font-size: 40rpx;
+  font-weight: bold;
+  color: white;
+  margin-left: 10rpx;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

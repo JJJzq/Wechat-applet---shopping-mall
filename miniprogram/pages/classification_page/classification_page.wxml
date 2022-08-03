@@ -1,0 +1,45 @@
+<view class="back">
+  <!-- 左侧 -->
+  <scroll-view scroll-y="true" class="left">
+    <block wx:for="{{types}}">
+      <view bindtap="getProductList" data-type="{{item.fType}}" data-index="{{index}}" class="{{currentType==index?'choose_type':''}}">{{item.fType}}</view>
+    </block>
+  </scroll-view>
+  <!-- 右侧 -->
+  <scroll-view scroll-y="true" class="right">
+    <block wx:for="{{productList}}">
+      <view class="order" bindtap="goDetail" data-item="{{item}}">
+        <view class="order-image">
+          <image src="{{item.fImg}}"></image>
+        </view>
+        <view class="order-des">
+          <view class="sp-name">
+            <text>{{item.fName}}</text>
+          </view>
+          <view class="sp-des">
+            <text>{{item.fDes}}</text>
+          </view>
+          <view class="sp-price">
+            <text>￥{{item.fPrice}}</text>
+          </view>
+        </view>
+        <!-- <view class="order-op">
+          <view class="del" data-index='{{index}}' catchtap="remove">
+            <text>X</text>
+          </view>
+          <view class="jj">
+            <view class="jian" catchtap='jian' data-index='{{index}}'>
+              <text>-</text>
+            </view>
+            <view class="bj">
+              <input type="number" value="{{item.number}}"></input>
+            </view>
+            <view class="jia" catchtap='jia' data-index='{{index}}'>
+              <text>+</text>
+            </view>
+          </view>
+        </view> -->
+      </view>
+    </block>
+  </scroll-view>
+</view>

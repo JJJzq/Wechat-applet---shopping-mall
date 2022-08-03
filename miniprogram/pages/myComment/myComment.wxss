@@ -1,0 +1,30 @@
+.back{
+  border-bottom: 2rpx gray solid;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+}
+
+.up image {
+  margin: 30rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+
+.up text {
+  margin-top: 50rpx;
+  /* margin-top: 20rpx; */
+  height: 100rpx;
+  font-size: 40rpx;
+}
+
+.down text{
+  margin: 0rpx 30rpx;
+}
+.pl_date{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+}

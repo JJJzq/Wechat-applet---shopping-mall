@@ -1,0 +1,40 @@
+<view class="back">
+  <view class='list'>
+    <block wx:for="{{list}}" >
+      <view class='a' bindtap="goDetail" data-index="{{index}}">
+        <view class="sale">
+          <text>已售{{item.fSellNum}}件</text>
+        </view>
+        <view class="a-img">
+          <image src="{{item.fImg}}"></image>
+        </view>
+        <view class="a-body">
+          <view class="name">
+            <text>{{item.fName}}</text>
+          </view>
+          <view class="des">
+            <text>{{item.fDes}}</text>
+          </view>
+        </view>
+        <view class="a-bottom">
+          <view class="a-bottom-left">
+            <!--  
+            <view class="vip-price">
+              <text>vip特价：{{item.fVip}}元</text>
+            </view>
+            -->
+            <view class="price">
+              <text>普通会员价：{{item.fPrice}}元</text>
+            </view>
+          </view>
+          <view class="a-bottom-right">
+            <view class="add-cart">
+              <image src="/pages/image/gouwuche.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>

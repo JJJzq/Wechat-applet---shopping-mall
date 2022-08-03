@@ -1,0 +1,75 @@
+<view class="content">
+  <view class="dzxx">
+    <text>地址信息:</text>
+  </view>
+  <button class="hqdz" bindtap="addAdress">获取地址</button>
+
+  <view class="address_box" wx:if="{{address}}">
+    <view class="address_box_top">
+      <text class="name">{{name}}</text>
+      <text>{{phone}}</text>
+    </view>
+    <view><text>{{address}}</text></view>
+  </view>
+
+  <view class="gwmx"><text>购物明细:</text></view>
+
+  <scroll-view class="top" scroll-y>
+    <block wx:for="{{cartList}}">
+      <view class="order" bindtap="goDetail" data-id="{{item._id}}">
+        <view class="select">
+          <icon wx:if="{{item.choose}}" type="success_circle" size='35' data-index='{{index}}' catchtap='changeSelect'></icon>
+          <icon wx:else type="circle" size='35' data-index='{{index}}' catchtap='changeSelect'></icon>
+        </view>
+        <view class="order-image">
+          <image src="{{item.fImg}}"></image>
+        </view>
+        <view class="order-des">
+          <view class="sp-name">
+            <text>{{item.fName}}</text>
+          </view>
+          <view class="sp-des">
+            <text>{{item.fDes}}</text>
+          </view>
+          <view class="sp-price">
+            <text>￥{{item.fPrice}}</text>
+          </view>
+        </view>
+        <view class="order-op">
+          <view class="del" data-index='{{index}}' catchtap="remove">
+            <text>X</text>
+          </view>
+          <view class="jj">
+            <view class="jian" catchtap='jian' data-index='{{index}}'>
+              <text>-</text>
+            </view>
+            <view class="bj">
+              <input type="number" value="{{item.number}}"></input>
+            </view>
+            <view class="jia" catchtap='jia' data-index='{{index}}'>
+              <text>+</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- 订单备注 -->
+    <view class="bz"><text>备注:</text></view>
+    <input type="text" bindinput="getNote" placeholder="请输入备注..." />
+  </scroll-view>
+  <view class="bottom">
+    <view class="select">
+      <icon wx:if='{{selectAll}}' type='success_circle' size='35' bindtap='selectAll'></icon>
+      <icon wx:else type='circle' size='35' bindtap='selectAll'></icon>
+    </view>
+    <view class="quanxuan">
+      <text>全选</text>
+    </view>
+    <view class="zongjia">
+      <text>￥{{total}}</text>
+    </view>
+    <view class='ljzf' bindtap="addOrder">
+      <text>立即支付</text>
+    </view>
+  </view>
+</view>

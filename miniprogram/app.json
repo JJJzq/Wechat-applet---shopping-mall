@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/home_page/home_page",
+    "pages/search/search",
+    "pages/order/order",
+    "pages/classification_page/classification_page",
+    "pages/cart/cart",
+    "pages/customer_service/customer_service",
+    "pages/mine/mine",
+    "pages/myOrder/myOrder",
+    "pages/myComment/myComment",
+    "pages/detail/detail",
+    "pages/test/test"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#EE0000",
+    "navigationBarTitleText": "微信购物商城",
+    "navigationBarTextStyle": "black"
+  },
+  
+
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home_page/home_page",
+        "text": "首页",
+        "iconPath": "/pages/image/shouye1.png",
+        "selectedIconPath": "/pages/image/shouye2.png"
+      },
+      {
+        "pagePath": "pages/classification_page/classification_page",
+        "text": "分类",
+        "iconPath": "/pages/image/faxian1.png",
+        "selectedIconPath": "/pages/image/faxian2.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "pages/image/gouwuche1.png",
+        "selectedIconPath": "pages/image/gouwuche2.png"
+      },
+      {
+        "pagePath": "pages/customer_service/customer_service",
+        "text": "客服",
+        "iconPath": "/pages/image/kefu1.png",
+        "selectedIconPath": "/pages/image/kefu2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/pages/image/wode1.png",
+        "selectedIconPath": "/pages/image/wode2.png"
+      }
+    ]
+  },
+  
+  "sitemapLocation": "sitemap.json"
+}

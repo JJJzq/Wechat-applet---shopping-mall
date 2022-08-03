@@ -1,0 +1,47 @@
+<view class="top">
+  <!-- 搜索框 -->
+  <view class="searchRoot">
+    <input class="searchInput" bindconfirm='goSearch' confirm-type='search' bindinput="getSearchKey" placeholder="请输入关键词" />
+    <image class="searchImg" bindtap="search" src="cloud://bysj-7glbx3bp5b77a3f1.6279-bysj-7glbx3bp5b77a3f1-1310139918/image/sousuo.png"></image>
+  </view>
+</view>
+
+<!-- <text class="xiahuaxian {{jieguo==0?'hidexian':''}}" bindtap="changeJG1">商品详情</text> -->
+
+
+<view class="list {{jieguo==1?'myhide':''}}">
+  <block wx:for="{{products}}">
+    <view class='a' bindtap="goDetail" data-item="{{item}}">
+      <view class="sale">
+        <text>已售{{item.fSellNum}}件</text>
+      </view>
+      <view class="a-img">
+        <image src="{{item.fImg}}"></image>
+      </view>
+      <view class="a-body">
+        <view class="name">
+          <text>{{item.fName}}</text>
+        </view>
+        <view class="des">
+          <text>{{item.fDes}}</text>
+        </view>
+      </view>
+      <view class="a-bottom">
+        <view class="a-bottom-left">
+
+          <!-- <view class="vip-price">
+              <text>vip特价：{{item.fVip}}元</text>
+            </view> -->
+          <view class="price">
+            <text>普通会员价：{{item.fPrice}}元</text>
+          </view>
+        </view>
+        <view class="a-bottom-right">
+          <view class="add-cart">
+            <image src="cloud://bysj-7glbx3bp5b77a3f1.6279-bysj-7glbx3bp5b77a3f1-1310139918/image/gouwuche.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

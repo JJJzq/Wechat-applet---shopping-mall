@@ -1,0 +1,116 @@
+<view class="back">
+  <view class='top'>
+
+    <!-- 搜索框 -->
+    <view class="searchRoot" bindtap="goSearch">
+      <input class="searchInput" bindconfirm='goSearch' confirm-type='search' bindinput="getSearchKey" placeholder="请输入关键词" />
+      <image class="searchImg" src="cloud://bysj-7glbx3bp5b77a3f1.6279-bysj-7glbx3bp5b77a3f1-1310139918/image/sousuo.png"></image>
+    </view>
+
+    <!--
+    <view class='top-left'>
+      <view class='sousuo'>
+        <image src='/pages/image/sousuo.png'></image>
+      </view>
+    </view>
+    <view class='top-right'>
+      <view class='bq'><text class="xiahuaxian {{jieguo==0?'hidexian':''}}" bindtap="changeJG1">全部商品</text></view>
+      <view class='bq'><text class="xiahuaxian {{jieguo==1?'hidexian':''}}" bindtap="changeJG2">包邮专区</text></view>
+      <view class='bq'><text class="xiahuaxian {{jieguo==1?'hidexian':''}}" bindtap="changeJG2">厨房必备</text></view>
+      <view class='bq'><text class="xiahuaxian {{jieguo==1?'hidexian':''}}" bindtap="changeJG2">休闲零食</text></view>
+    </view>
+    -->
+  </view>
+
+  <view class='lunbo'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" class="swiper">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item class="si">
+          <image src="{{item.lunbo1_img}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='vip'>
+    <view class="vip-top">
+      <view class="vip-top-left">会员动态</view>
+      <view class="vip-top-right">
+        <view class="hydt1">黄**6分钟前加入了【VIP】</view>
+        <view class="hydt2">郁**1小时前购买了苹果</view>
+      </view>
+    </view>
+    <view class="vip-body">
+      <view class="vip-body-top">加入VIP会员立得价值260元礼包</view>
+      <view class="vip-body-bottom">商城购物打折 门店用餐享优惠</view>
+    </view>
+    <view class="vip-down">
+      <view class="hd">
+        <view class="hd-left">
+          <view class="hd-title">
+            <text>拼团专区</text>
+          </view>
+          <view class="hd-des">
+            <text>拼越多省越多</text>
+          </view>
+          <view class="logo">
+            <image src="cloud://bysj-7glbx3bp5b77a3f1.6279-bysj-7glbx3bp5b77a3f1-1310139918/image/jiantou.png"></image>
+          </view>
+        </view>
+        <view class="hd-right">
+          <image src="cloud://bysj-7glbx3bp5b77a3f1.6279-bysj-7glbx3bp5b77a3f1-1310139918/image/pintuan.png"></image>
+        </view>
+      </view>
+      <view class="hd">
+        <view class="hd-left">
+          <view class="hd-title">
+            <text>每月新品</text>
+          </view>
+          <view class="hd-des">
+            <text>月月有新款</text>
+          </view>
+          <view class="logo">
+            <image src="cloud://bysj-7glbx3bp5b77a3f1.6279-bysj-7glbx3bp5b77a3f1-1310139918/image/jiantou.png"></image>
+          </view>
+        </view>
+        <view class="hd-right">
+          <image src="cloud://bysj-7glbx3bp5b77a3f1.6279-bysj-7glbx3bp5b77a3f1-1310139918/image/xinpin.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='list'>
+    <block wx:for="{{products}}">
+      <view class='a' bindtap="goDetail" data-item="{{item}}">
+        <view class="sale">
+          <text>已售{{item.fSellNum}}件</text>
+        </view>
+        <view class="a-img">
+          <image src="{{item.fImg}}"></image>
+        </view>
+        <view class="a-body">
+          <view class="name">
+            <text>{{item.fName}}</text>
+          </view>
+          <view class="des">
+            <text>{{item.fDes}}</text>
+          </view>
+        </view>
+        <view class="a-bottom">
+          <view class="a-bottom-left">
+            <!-- <view class="vip-price">
+              <text>vip特价：{{item.fVip}}元</text>
+            </view> -->
+            <view class="price">
+              <text>普通会员价：{{item.fPrice}}元</text>
+            </view>
+          </view>
+          <view class="a-bottom-right">
+            <view class="add-cart">
+              <image src="cloud://bysj-7glbx3bp5b77a3f1.6279-bysj-7glbx3bp5b77a3f1-1310139918/image/gouwuche.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

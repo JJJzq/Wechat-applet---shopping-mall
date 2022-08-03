@@ -1,0 +1,13 @@
+<block wx:for="{{list}}" wx:key="{{index}}">
+  <view class="back">
+    <view class="up">
+      <image src="{{item.user_img}}"></image>
+      <text>{{item.user_name}}</text>
+    </view>
+
+    <view class="down">
+      <text>{{item.content}}</text>
+    </view>
+    <view class="pl_date"><text>{{item.pl_date}}</text></view>
+  </view>
+</block>
